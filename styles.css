@@ -545,13 +545,17 @@ footer a {
 
     /* Ajustes de navegación para móvil */
     .nav-container {
-        padding: 0.5rem 15px; /* Menos padding en el header */
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
     }
     nav ul {
-        gap: 5px; /* Menos espacio entre botones */
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     nav a {
-        padding: 8px 10px; /* Botones más pequeños */
-        font-size: 0.85rem;
+        padding: 6px 10px;
+        font-size: 0.8rem;
     }
 }
