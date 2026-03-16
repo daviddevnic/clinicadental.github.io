@@ -1,0 +1,557 @@
+:root {
+    --primary-color: #0ea5e9; /* Sky Blue moderno y vibrante */
+    --primary-dark: #0284c7;
+    --primary-light: #f0f9ff;
+    --accent-color: #06b6d4; /* Cyan */
+    --whatsapp-color: #22c55e;
+    --text-dark: #0f172a; /* Slate oscuro para mejor lectura */
+    --text-light: #64748b; /* Slate suave */
+    --bg-body: #f8fafc; /* Fondo casi blanco, muy limpio */
+    --bg-white: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+}
+
+
+
+body {
+    background-color: var(--bg-body);
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Tipografía más moderna */
+    color: var(--text-dark);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 1440px; /* Contenedor principal más estrecho y centrado */
+    background-color: var(--bg-white);
+    box-shadow: 0 10px 50px -20px rgba(0,0,0,0.1); /* Sombra suave para destacar */
+    overflow-x: hidden;
+    position: relative;
+}
+
+.booking-section {
+    padding: 80px 20px; /* Más espacio vertical (aire) */
+    background-color: transparent;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px; /* Contenedor estándar moderno */
+    margin: 0 auto;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+    padding: 0 20px;
+}
+
+.section-title {
+    /* Estilo de título tipo "píldora" */
+    display: inline-block;
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    margin-bottom: 50px;
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Grilla inteligente responsiva */
+    gap: 30px;
+}
+
+.booking-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(255,255,255,0.5); /* Borde sutil */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.booking-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    transition: transform 0.3s;
+}
+
+.booking-card:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.booking-card h3 {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.booking-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    width: 100%; /* Botones anchos estilo app */
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-google {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white;
+}
+
+/* Estilos para Sección de Ubicación */
+.section-white {
+    border-radius: 40px 40px 0 0; /* Efecto de tarjeta moderna */
+    margin-top: -40px;
+    position: relative;
+    z-index: 10;
+}
+
+.location-container {
+    display: flex;
+    justify-content: center;
+}
+
+.location-container .booking-card {
+    width: 100%;
+}
+
+/* --- NUEVOS ESTILOS --- */
+
+/* Navegación */
+header {
+    background-color: rgba(255, 255, 255, 0.85); /* Transparencia */
+    backdrop-filter: blur(12px); /* Efecto Glassmorphism */
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600; /* Un poco más de peso */
+    font-size: 0.9rem;
+    padding: 10px 18px; /* Espaciado interno para forma de botón */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    background-color: var(--primary-color); /* Fondo al pasar el mouse */
+    transform: translateY(-2px); /* Ligero efecto de elevación */
+    box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);
+}
+
+/* Hero Section (Inicio) */
+.hero {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: radial-gradient(circle at top right, #e0f2fe 0%, #ffffff 60%);
+    overflow: hidden; /* Para contener las animaciones */
+    position: relative;
+}
+
+/* Elemento decorativo de fondo */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50px; left: -50px;
+    width: 300px; height: 300px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.hero-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    perspective: 1200px;
+    height: 400px; /* Damos altura al contenedor para posicionar las cartas */
+}
+
+.hero-card {
+    width: 200px; /* Ligeramente más pequeños para caber en la vista móvil */
+    height: 320px;
+    position: absolute; /* Usamos posicionamiento absoluto para superponerlas */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 4px solid white;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra la tarjeta sin deformarse */
+}
+
+.hero-card:nth-child(1) {
+    transform: translateX(-90px) rotate(-10deg);
+}
+
+.hero-card:nth-child(2) {
+    transform: translateY(-20px);
+    z-index: 1;
+}
+
+.hero-card:nth-child(3) {
+    transform: translateX(90px) rotate(10deg);
+}
+
+.hero-card:hover {
+    transform: translateY(-40px) scale(1.05) !important; /* !important para sobreescribir en hover */
+    z-index: 2;
+    box-shadow: 0 30px 60px rgba(14, 165, 233, 0.25); /* Sombra de color (Glow) */
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA SERVICIOS --- */
+.service-card {
+    align-items: flex-start; /* Alinear contenido a la izquierda */
+    text-align: left;
+    border-left: none; /* Quitamos borde viejo */
+    border-top: 5px solid transparent; /* Borde superior moderno */
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card .icon {
+    background-color: var(--bg-body);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Iconos circulares */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-benefits {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding: 0;
+    margin: 15px 0 20px 0;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.service-benefits li {
+    margin-bottom: 10px;
+    padding-left: 25px; /* Espacio para el icono */
+    position: relative;
+    line-height: 1.4;
+}
+
+/* Crear un "check" personalizado para la lista */
+.service-benefits li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--whatsapp-color); /* Usamos verde para denotar positivo/beneficio */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Botón específico para las tarjetas de servicio */
+.btn-service {
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-service:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Colores por tipo de servicio */
+.service-cleaning { border-top-color: #00bcd4; }
+.service-cleaning .icon { color: #00bcd4; background-color: #ecfeff; }
+
+.service-whitening { border-top-color: #ffca28; }
+.service-whitening .icon { color: #f59e0b; background-color: #fffbeb; }
+
+.service-ortho { border-top-color: #8b5cf6; }
+.service-ortho .icon { color: #7c3aed; background-color: #f5f3ff; }
+
+/* --- ESTILOS PARA INSTALACIONES Y EQUIPO --- */
+
+/* Instalaciones */
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.facility-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+    text-align: left;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--primary-light);
+    cursor: pointer;
+}
+
+.facility-content {
+    padding: 25px;
+}
+
+.facility-content h3 {
+    color: var(--text-dark);
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Equipo */
+.team-card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.team-img {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-light);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.team-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- ESTILOS PARA LIGHTBOX (VISUALIZADOR DE IMAGEN) --- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: pointer;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    cursor: default;
+    animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0.8); } to { transform: scale(1); } }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 640px) {
+    .section-title {
+        font-size: 1.6rem; /* Títulos más pequeños en móvil */
+        padding: 10px 25px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero-cards-container {
+        height: 350px; /* Reducir altura del contenedor */
+        margin-top: 40px;
+    }
+
+    .hero-card {
+        width: 160px; /* Tarjetas más pequeñas */
+        height: 260px;
+        border-width: 3px;
+    }
+
+    .hero-card:nth-child(1) {
+        transform: translateX(-55px) rotate(-10deg); /* Menos desplazamiento */
+    }
+
+    .hero-card:nth-child(2) {
+        transform: translateY(-10px) scale(1.05); /* Ligeramente más grande y centrado */
+    }
+
+    .hero-card:nth-child(3) {
+        transform: translateX(55px) rotate(10deg); /* Menos desplazamiento */
+    }
+
+    /* Ajustes de navegación para móvil */
+    .nav-container {
+        padding: 0.5rem 15px; /* Menos padding en el header */
+    }
+    nav ul {
+        gap: 5px; /* Menos espacio entre botones */
+    }
+    nav a {
+        padding: 8px 10px; /* Botones más pequeños */
+        font-size: 0.85rem;
+    }
+}
