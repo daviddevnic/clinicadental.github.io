@@ -1,174 +1,154 @@
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Dental Managua | Dr. David Devnic - Odontología Integral</title>
+    
+    <meta name="description" content="Salud bucal experta en Managua con el Dr. David Devnic. Más de 33 años de experiencia en limpieza, ortodoncia y blanqueamiento dental.">
+    <meta name="keywords" content="dentista managua, clinica dental managua, dr david devnic, ortodoncia managua, blanqueamiento dental nicaragua">
+    <meta name="author" content="David Devnic">
+
+    <meta property="og:title" content="Clínica Dental Managua | Dr. David Devnic">
+    <meta property="og:description" content="Tu salud bucal en manos expertas. Visítanos en la Colonia Centro América.">
+    <meta property="og:image" content="https://iili.io/qGYdtyl.png">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
 <div class="main-wrapper">
 
-<!-- Navegación -->
-<header>
-    <div class="nav-container">
-        <a href="#inicio" class="logo">Clínica Dental Managua</a>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#citas">Agendar Cita</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- Inicio -->
-<section id="inicio" class="hero">
-    <div class="container">
-        <h1 class="section-title">Dr. David Devnic</h1>
-        <p class="section-subtitle">Odontólogo con +33 años de experiencia. Tu salud bucal en manos expertas.</p>
-
-        <div class="hero-cards-container">
-            <div class="hero-card" onclick="openLightbox(this)">
-                <img src="imagenes/https://i.imgur.com/IttqwU1.jpeg" alt="Bienvenida a Clínica Dental Managua">
-            </div>
-            <div class="hero-card" onclick="openLightbox(this)">
-                <img src="imagenes/https://i.imgur.com/8IMQNSE.jpeg" alt="Equipo profesional de la clínica">
-            </div>
-            <div class="hero-card" onclick="openLightbox(this)">
-                <img src="imagenes/https://i.imgur.com/VYSUeCJ.jpeg" alt="Instalaciones modernas de la clínica">
-            </div>
+    <header>
+        <div class="nav-container">
+            <a href="#inicio" class="logo">Clínica Dental Managua</a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#instalaciones">Instalaciones</a></li>
+                    <li><a href="#citas">Citas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- Servicios -->
-<section id="servicios" class="booking-section section-white">
-    <div class="container">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <p class="section-subtitle">Tratamientos profesionales para ti.</p>
-        <div class="booking-grid">
-            <!-- Limpieza -->
-            <div class="booking-card service-card service-cleaning">
-                <div class="icon">🦷</div>
-                <h3>Limpieza Dental</h3>
-                <p>Higiene profunda para prevenir enfermedades.</p>
-                <ul class="service-benefits">
-                    <li>Eliminación de sarro y placa bacteriana.</li>
-                    <li>Prevención de caries y gingivitis.</li>
-                    <li>Sensación de frescura inmediata.</li>
-                </ul>
-                <a href="https://wa.me/50577101883?text=Hola,%20me%20interesa%20el%20servicio%20de%20limpieza%20dental" target="_blank" class="btn btn-service">Me interesa</a>
-            </div>
-            <!-- Blanqueamiento -->
-            <div class="booking-card service-card service-whitening">
-                <div class="icon">✨</div>
-                <h3>Blanqueamiento</h3>
-                <p>Recupera el brillo natural de tu sonrisa.</p>
-                <ul class="service-benefits">
-                    <li>Aclara varios tonos en una sesión.</li>
-                    <li>Eliminación de manchas difíciles.</li>
-                    <li>Resultados estéticos visibles.</li>
-                </ul>
-                <a href="https://wa.me/50577101883?text=Hola,%20me%20interesa%20el%20servicio%20de%20blanqueamiento" target="_blank" class="btn btn-service">Me interesa</a>
-            </div>
-            <!-- Ortodoncia -->
-            <div class="booking-card service-card service-ortho">
-                <div class="icon">🔧</div>
-                <h3>Ortodoncia</h3>
-                <p>Corrección de la posición dental.</p>
-                <ul class="service-benefits">
-                    <li>Alineación perfecta de los dientes.</li>
-                    <li>Mejora la mordida y la masticación.</li>
-                    <li>Estética facial armoniosa.</li>
-                </ul>
-                <a href="https://wa.me/50577101883?text=Hola,%20me%20interesa%20el%20servicio%20de%20ortodoncia" target="_blank" class="btn btn-service">Me interesa</a>
-            </div>
-        </div>
-    </div>
-</section>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1 class="section-title">Dr. David Devnic</h1>
+                <p class="section-subtitle">Odontólogo con +33 años de experiencia. Tu salud bucal en manos expertas.</p>
 
-<!-- Instalaciones -->
-<section class="booking-section">
-    <div class="container">
-        <h2 class="section-title">Nuestras Instalaciones</h2>
-        <p class="section-subtitle">Un ambiente diseñado para tu comodidad y tranquilidad.</p>
-        
-        <div class="facilities-grid">
-            <!-- Tarjeta 1: Parqueo -->
-            <div class="facility-card">
-                <!-- REEMPLAZAR IMAGEN: Agrega tu foto como 'parqueo.jpg' en la carpeta imagenes -->
-                <img src="imagenes/parqueo.png" alt="Parqueo Privado" onclick="openLightbox(this)" onerror="this.src='https://placehold.co/600x400/e0f2fe/0ea5e9?text=Parqueo+Privado'">
-                <div class="facility-content">
-                    <h3>Parqueo Privado</h3>
-                    <p>Contamos con estacionamiento exclusivo y seguro para que tu llegada sea sin estrés.</p>
+                <div class="hero-cards-container">
+                    <div class="hero-card" onclick="openLightbox(this)">
+                        <img src="https://iili.io/qGYdtyl.png" alt="Bienvenida a Clínica Dental Managua">
+                    </div>
+                    <div class="hero-card" onclick="openLightbox(this)">
+                        <img src="https://iili.io/qGYdZv4.png" alt="Equipo profesional de la clínica">
+                    </div>
+                    <div class="hero-card" onclick="openLightbox(this)">
+                        <img src="https://iili.io/qGYdL3G.png" alt="Instalaciones modernas de la clínica">
+                    </div>
                 </div>
             </div>
-            <!-- Tarjeta 2: Recepción -->
-            <div class="facility-card">
-                <!-- REEMPLAZAR IMAGEN: Agrega tu foto como 'recepcion.jpg' -->
-                <img src="imagenes/sala-de-espera.png" alt="Recepción Amplia" onclick="openLightbox(this)" onerror="this.src='https://placehold.co/600x400/e0f2fe/0ea5e9?text=Recepcion+Amplia'">
-                <div class="facility-content">
-                    <h3>Recepción Amplia</h3>
-                    <p>Una sala de espera espaciosa y confortable, perfecta para relajarte antes de tu consulta.</p>
+        </section>
+
+        <section id="servicios" class="booking-section section-white">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="booking-grid">
+                    <article class="booking-card service-card">
+                        <div class="icon">🦷</div>
+                        <h3>Limpieza Dental</h3>
+                        <p>Higiene profunda para prevenir enfermedades.</p>
+                        <a href="https://wa.me/50577101883?text=Hola,%20me%20interesa%20la%20limpieza" class="btn btn-service">Me interesa</a>
+                    </article>
+                    <article class="booking-card service-card">
+                        <div class="icon">✨</div>
+                        <h3>Blanqueamiento</h3>
+                        <p>Recupera el brillo natural de tu sonrisa.</p>
+                        <a href="https://wa.me/50577101883?text=Hola,%20me%20interesa%20el%20blanqueamiento" class="btn btn-service">Me interesa</a>
+                    </article>
+                    <article class="booking-card service-card">
+                        <div class="icon">🔧</div>
+                        <h3>Ortodoncia</h3>
+                        <p>Corrección de la posición dental con tecnología moderna.</p>
+                        <a href="https://wa.me/50577101883?text=Hola,%20me%20interesa%20la%20ortodoncia" class="btn btn-service">Me interesa</a>
+                    </article>
                 </div>
             </div>
-            <!-- Tarjeta 3: Consultorio -->
-            <div class="facility-card">
-                <!-- REEMPLAZAR IMAGEN: Agrega tu foto como 'consultorio.jpg' -->
-                <img src="imagenes/consultario.png" alt="Consultorio Moderno" onclick="openLightbox(this)" onerror="this.src='https://placehold.co/600x400/e0f2fe/0ea5e9?text=Consultorio'">
-                <div class="facility-content">
-                    <h3>Consultorio Limpio y Cómodo</h3>
-                    <p>Espacios esterilizados con los más altos estándares y equipados para tu bienestar.</p>
+        </section>
+
+        <section id="instalaciones" class="booking-section">
+            <div class="container">
+                <h2 class="section-title">Nuestras Instalaciones</h2>
+                <p class="section-subtitle">Un ambiente diseñado para tu comodidad y tranquilidad.</p>
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <img src="https://iili.io/qGYo1Pp.png" alt="Parqueo Privado" onclick="openLightbox(this)">
+                        <div class="facility-content">
+                            <h3>Parqueo Privado</h3>
+                            <p>Estacionamiento exclusivo y seguro para nuestros pacientes.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="https://iili.io/qGYoVSt.png" alt="Recepción Amplia" onclick="openLightbox(this)">
+                        <div class="facility-content">
+                            <h3>Recepción Amplia</h3>
+                            <p>Sala de espera confortable y moderna.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="https://iili.io/qGYngwJ.png" alt="Consultorio Moderno" onclick="openLightbox(this)">
+                        <div class="facility-content">
+                            <h3>Consultorio Clínico</h3>
+                            <p>Espacios esterilizados con tecnología de punta.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Nuestro Equipo -->
-<section class="booking-section">
-    <div class="container">
-        <h2 class="section-title">Nuestro Equipo</h2>
-        <p class="section-subtitle">Conoce a los especialistas detrás de tu sonrisa.</p>
+        <section id="equipo" class="booking-section section-white">
+            <div class="container">
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <div class="booking-grid">
+                    <article class="team-card">
+                        <img src="https://iili.io/qGYolov.png" alt="Dr. David Devnic" class="team-img" onclick="openLightbox(this)">
+                        <h3>Dr. David Devnic</h3>
+                        <span class="team-role">Fundador & Odontólogo</span>
+                    </article>
+                    <article class="team-card">
+                        <img src="https://iili.io/qGYoucP.png" alt="Dr. Bad Bunny" class="team-img" onclick="openLightbox(this)">
+                        <h3>Dr. Bad Bunny</h3>
+                        <span class="team-role">Cirujano Maxilofacial</span>
+                    </article>
+                    <article class="team-card">
+                        <img src="https://iili.io/qGYo3c7.png" alt="Dra. Kim Kardashian" class="team-img" onclick="openLightbox(this)">
+                        <h3>Dra. Kim Kardashian</h3>
+                        <span class="team-role">Estética Dental</span>
+                    </article>
+                    <article class="team-card">
+                        <img src="https://iili.io/qGYoBwb.png" alt="Dra. Taylor Swift" class="team-img" onclick="openLightbox(this)">
+                        <h3>Dra. Taylor Swift</h3>
+                        <span class="team-role">Odontopediatría</span>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="booking-grid"> <!-- Reutilizamos el grid responsive existente -->
-            <div class="team-card">
-                <img src="imagenes/drdavid.png" alt="Dr. David Devnic" class="team-img" onclick="openLightbox(this)" onerror="this.src='https://placehold.co/300x300/e0f2fe/0ea5e9?text=Dr.+David'">
-                <h3>Dr. David Devnic</h3>
-                <span class="team-role">Fundador & Odontólogo</span>
-                <p>Más de 33 años de experiencia cuidando la salud dental de Managua.</p>
-            </div>
-            <div class="team-card">
-                <img src="imagenes/drbadbunny.png" alt="Dr. Bad Bunny" class="team-img" onclick="openLightbox(this)" onerror="this.src='https://placehold.co/300x300/e0f2fe/0ea5e9?text=Dr.+Bad+Bunny'">
-                <h3>Dr. Bad Bunny</h3>
-                <span class="team-role">Cirujano Maxilofacial</span>
-                <p>Especialista en reconstrucción y cirugía compleja con un toque moderno.</p>
-            </div>
-            <div class="team-card">
-                <img src="imagenes/drakimkardashain.png" alt="Dra. Kim Kardashian" class="team-img" onclick="openLightbox(this)" onerror="this.src='https://placehold.co/300x300/e0f2fe/0ea5e9?text=Dra.+Kim'">
-                <h3>Dra. Kim Kardashian</h3>
-                <span class="team-role">Estética Dental</span>
-                <p>Experta en diseño de sonrisas perfectas y blanqueamientos de alto nivel.</p>
-            </div>
-            <div class="team-card">
-                <img src="imagenes/drataylorswift.png" alt="Dra. Taylor Swift" class="team-img" onclick="openLightbox(this)" onerror="this.src='https://placehold.co/300x300/e0f2fe/0ea5e9?text=Dra.+Taylor'">
-                <h3>Dra. Taylor Swift</h3>
-                <span class="team-role">Odontopediatría</span>
-                <p>Dedicada al cuidado suave y divertido de los dientes de los más pequeños.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Citas -->
-<section id="citas" class="booking-section">
+       <section id="citas" class="booking-section">
     <div class="container">
         <h2 class="section-title">Reserva tu Espacio</h2>
-        <p class="section-subtitle">Elige la modalidad que más te convenga para nuestra sesión.</p>
-
         <div class="booking-grid">
             <div class="booking-card">
-                <div class="icon">📅</div>
-                <h3>Calendario de Google</h3>
-                <p>Agenda la cita por ti mismo, ve la disponibilidad y asiste de forma automática.</p>
-                <!-- Google Calendar Appointment Scheduling begin -->
-<div class="google-calendar-btn-container">
+                <h3>Google Calendar</h3>
+                <p>Agenda automáticamente según disponibilidad.</p>
+                
+                <div class="calendar-wrapper" style="margin-top: 20px;">
+                    <!-- Google Calendar Appointment Scheduling begin -->
 <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 <script>
@@ -184,78 +164,45 @@
   });
 })();
 </script>
-</div>
 <!-- end Google Calendar Appointment Scheduling -->
-            </div>
+                </div>
+                </div>
 
             <div class="booking-card">
-                <div class="icon">💬</div>
-                <h3>Solicitud por WhatsApp</h3>
-                <p>¿Prefieres algo más personal? Envíame un mensaje directo para coordinar un horario.</p>
-                <a href="https://wa.me/50577433084?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20el%20d%C3%ADa%20(Especificar%20el%20d%C3%ADa)%20a%20las%20(Especificar%20la%20hora)." target="_blank" class="btn btn-whatsapp">Contactar por WhatsApp</a>
+                <h3>WhatsApp</h3>
+                <p>¿Prefieres atención personalizada? Escríbenos directamente.</p>
+                <a href="https://wa.me/50577433084" target="_blank" class="btn btn-whatsapp">Contactar ahora</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="booking-section section-white">
-    <div class="container">
-        <h2 class="section-title">Ubicación</h2>
-        <p class="section-subtitle">Visítanos en nuestra sede.</p>
-
-        <div class="location-container">
-            <div class="booking-card">
-                <div class="icon">📍</div>
-                <h3>Nuestra Dirección</h3>
-                <p>Managua Nicaragua Colonia Centro America</p>
-                <a href="https://maps.app.goo.gl/QcjMLBgwB5LV7pfG7" target="_blank" class="btn btn-google">Ver en Google Maps</a>
+        <section class="booking-section section-white">
+            <div class="container">
+                <h2 class="section-title">Ubicación</h2>
+                <div class="location-container">
+                    <div class="booking-card">
+                        <div class="icon">📍</div>
+                        <h3>Managua, Nicaragua</h3>
+                        <p>Colonia Centro América</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-google">Ver Mapa</a>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Clínica Dental Managua. Dr. David Devnic.</p>
         </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
+        <span class="lightbox-close" onclick="closeLightbox()">×</span>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Imagen ampliada">
     </div>
-</section>
 
-
-
-<!-- Contacto -->
-<section id="contacto" class="booking-section">
-    <div class="container">
-        <h2 class="section-title">Ponte en Contacto</h2>
-        <p class="section-subtitle">¿Tienes alguna pregunta? Estamos aquí para ayudarte.</p>
-        <div class="booking-grid">
-            <div class="booking-card">
-                <div class="icon">📞</div>
-                <h3>Teléfono</h3>
-                <p>Llámanos para consultas rápidas o para agendar tu cita directamente.</p>
-                <a href="tel:+50577101883" class="btn btn-service">+505 7710 1883</a>
-            </div>
-            <div class="booking-card">
-                <div class="icon">✉️</div>
-                <h3>Correo Electrónico</h3>
-                <p>Para consultas detalladas o envío de documentos, escríbenos un email.</p>
-                <a href="mailto:atencion@clinicadentalmanagua.net" class="btn btn-service">atencion@clinicadentalmanagua.net</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <h3>Clínica Dental Managua</h3>
-        <p>Síguenos en nuestras redes sociales</p>
-        <div style="margin-top: 20px;">
-            <a href="#">Facebook</a> | 
-            <a href="#">Instagram</a> | 
-            <a href="#">TikTok</a>
-        </div>
-        <p style="margin-top: 20px; font-size: 0.8rem; color: #9ca3af;">&copy; 2026 Dr. David Devnic. Todos los derechos reservados.</p>
-    </div>
-</footer>
-
-<!-- Lightbox Modal (Visualizador de Imágenes) -->
-<div id="lightbox" class="lightbox-overlay">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-image" class="lightbox-content" src="" alt="Imagen ampliada">
 </div>
 
 <script>
@@ -263,12 +210,8 @@
     const lightboxImage = document.getElementById('lightbox-image');
 
     function openLightbox(element) {
-        // Evita que el click en el overlay (para cerrar) se active al abrir
         event.stopPropagation(); 
-
-        // Detectar si se pasó la imagen directamente o un contenedor (como en el hero)
         const img = element.tagName === 'IMG' ? element : element.querySelector('img');
-        
         if (img) {
             lightboxImage.src = img.src;
             lightboxImage.alt = img.alt;
@@ -278,18 +221,12 @@
 
     function closeLightbox() {
         lightbox.style.display = 'none';
-        lightboxImage.src = ''; // Limpia el src para detener la carga
+        lightboxImage.src = '';
     }
 
-    // Cierra el lightbox al hacer click en el fondo (overlay)
     lightbox.addEventListener('click', closeLightbox);
-
-    // Cierra el lightbox con la tecla Escape
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && lightbox.style.display === 'flex') {
-            closeLightbox();
-        }
-    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
-</div>
+</body>
+</html>
